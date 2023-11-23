@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/aiep_movil_pruebas/ejercicio_2/src/app/pages/login-guia/login-guia.page.html"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">acceso_socio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form #usuarioform="ngForm">
+    <table>
+      <tr>
+        <td>
+          <ion-input label="Nombre" label-placement="floating" fill="solid" name="nombre" placeholder="Ingrese su nombre"></ion-input>
+        </td>
+        <td>
+          <ion-input label="Apellido" label-placement="floating" fill="solid" name="apellido" placeholder="Ingrese su apellido"></ion-input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ion-input label="Nombre" label-placement="floating" fill="solid" name="nombre" placeholder="Ingrese su nombre"></ion-input>
+        </td>
+        <td>
+          <ion-input label="Apellido" label-placement="floating" fill="solid" name="apellido" placeholder="Ingrese su apellido"></ion-input>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <ion-button>Agregar Socio</ion-button>
+</ion-content>
+

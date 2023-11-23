@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login Guía</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login Guía</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form #loginForm="ngForm">
+    <ion-item>
+      <ion-label>Usuario</ion-label>
+      <ion-input type="usuario" name="usuario" [(ngModel)]="formDatos.usuario" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="formDatos.password" minLength="3" maxLength="5" clear-input="true" required></ion-input>
+    </ion-item>
+    <div *ngIf="mensajeError" class="error-message">
+      {{ mensajeError }}
+    </div>
+
+    <ion-button [disabled]="!loginForm.valid" (click)="onSubmit(formDatos)">Ingresar</ion-button>
+  </form>
+</ion-content>
